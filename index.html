@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Semester Deadline Tracker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="brand">
+      <img src="Scaler.png" alt="Scaler logo" class="brand-logo">
+      <h1>Deadline Tracker</h1>
+    </div>
+    <p class="header-stats">6 upcoming · 1 overdue</p>
+  </header>
+
+  <main class="layout">
+
+    
+    <section class="next-up webdev">
+      <p class="next-label">Next up</p>
+      <h2 class="next-title">Web Dev Project Submission</h2>
+      <p class="next-meta">Web Dev · Project · <time datetime="2026-10-05">Mon, 5 Oct</time></p>
+      <p class="next-days">Today<small>due today</small></p>
+    </section>
+
+    
+    <aside class="summary">
+      <h2>Subjects</h2>
+      <table>
+        <thead>
+          <tr><th>Subject</th><th>Items</th><th>Next due</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><span class="dot icp"></span>ICP</td><td>2</td><td>7 Oct</td></tr>
+          <tr><td><span class="dot webdev"></span>Web Dev</td><td>2</td><td>5 Oct</td></tr>
+          <tr><td><span class="dot maths"></span>Maths</td><td>2</td><td>11 Oct</td></tr>
+          <tr><td><span class="dot club"></span>Club</td><td>1</td><td>9 Oct</td></tr>
+        </tbody>
+      </table>
+      <p class="updated">Last updated: <time datetime="2026-10-05">5 Oct 2026</time></p>
+    </aside>
+
+    
+    <section class="board">
+      
+      <input type="radio" name="filter" id="f-all" class="filter-radio" checked>
+      <input type="radio" name="filter" id="f-icp" class="filter-radio">
+      <input type="radio" name="filter" id="f-webdev" class="filter-radio">
+      <input type="radio" name="filter" id="f-maths" class="filter-radio">
+      <input type="radio" name="filter" id="f-club" class="filter-radio">
+
+      <nav class="filters" aria-label="Filter by subject">
+        <label for="f-all" class="chip">All</label>
+        <label for="f-icp" class="chip">ICP</label>
+        <label for="f-webdev" class="chip">Web Dev</label>
+        <label for="f-maths" class="chip">Maths</label>
+        <label for="f-club" class="chip">Club</label>
+      </nav>
+
+      <div class="cards">
+
+        <article class="card webdev urgent">
+          <span class="badge">Web Dev · Project</span>
+          <h3>Web Dev Project Submission</h3>
+          <p class="date"><time datetime="2026-10-05">Mon, 5 Oct</time></p>
+          <p class="days-num">Today</p>
+          <p class="days-label">due today</p>
+        </article>
+
+        <article class="card icp urgent">
+          <span class="badge">ICP · Viva</span>
+          <h3>ICP Viva</h3>
+          <p class="date"><time datetime="2026-10-07">Wed, 7 Oct</time></p>
+          <p class="days-num">2</p>
+          <p class="days-label">days left</p>
+        </article>
+
+        <article class="card club">
+          <span class="badge">Club · CP Lab</span>
+          <h3>CP Lab Weekly Contest</h3>
+          <p class="date"><time datetime="2026-10-09">Fri, 9 Oct</time></p>
+          <p class="days-num">4</p>
+          <p class="days-label">days left</p>
+        </article>
+
+        <article class="card maths">
+          <span class="badge">Maths · Assignment</span>
+          <h3>Maths problem set 5</h3>
+          <p class="date"><time datetime="2026-10-11">Sun, 11 Oct</time></p>
+          <p class="days-num">6</p>
+          <p class="days-label">days left</p>
+        </article>
+
+        <article class="card icp">
+          <span class="badge">ICP · End-term</span>
+          <h3>End-term exams begin</h3>
+          <p class="date"><time datetime="2026-10-19">Mon, 19 Oct</time></p>
+          <p class="days-num">14</p>
+          <p class="days-label">days left</p>
+        </article>
+
+        <article class="card maths">
+          <span class="badge">Maths · Assignment</span>
+          <h3>Maths Assignment</h3>
+          <p class="date"><time datetime="2026-10-20">Tue, 20 Oct</time></p>
+          <p class="days-num">15</p>
+          <p class="days-label">days left</p>
+        </article>
+
+        <article class="card webdev overdue">
+          <span class="badge">Web Dev · Assignment</span>
+          <h3>JavaScript assignment</h3>
+          <p class="date"><time datetime="2026-10-04">Sun, 4 Oct</time></p>
+          <p class="days-num">1</p>
+          <p class="days-label">day late</p>
+          <span class="stamp">OVERDUE</span>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>Built by Avani Deshpande</p>
+  </footer>
+
+</body>
+</html>
